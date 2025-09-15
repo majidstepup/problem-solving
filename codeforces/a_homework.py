@@ -1,21 +1,20 @@
 # Problem Source: https://codeforces.com/contest/2132/problem/A
 
 t = int(input())
-
+ 
 result = []
-for i in range(t):
+for _ in range(t):
     n = int(input())
     a = input()
     m = int(input())
     b = input()
     c = input()
-
-    for j in range(m):
-        if c[j] == 'D':
-            a = a + b[j]
+ 
+    for i in range(m):
+        if c[i] == 'D':
+            a = a + b[i]
         else:
-            a = b[j] + a
+            a = b[i] + a
     result.append(a)
-
-for data in result:
-    print(data)
+ 
+print("\n".join(result))
